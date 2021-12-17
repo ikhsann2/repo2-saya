@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas 6</title>
+</head>
+<body>
+<script>
+
+	alert('ISIKAN SETIAP JAWABAN DENGAN MENGGUANAKAN HURUF BESAR!!!');  
+	var nama=prompt('Nama : ');
+	var absen=prompt('Masukkan Jumlah Alfa :');
+	var alfa=25000*absen;
+	var jbtn=prompt("Apakah Jabatan Anda?\nA.Manager\nB.Kabid\nC.Staff")
+	var anak=prompt("Masukkan Jumlah Anak :")
+	var tunjangank=50000*anak;
+	var kawin=prompt("Masukkan Status Pernikahan : \nYA/TIDAK")
+		    
+	var boss=2000000;
+	var waklil=1500000;
+	var anggota=1000000;
+	var total=(parseInt(tunjangank)+parseInt(jbtn))-alfa;
+
+	document.write("Nama : "+nama);
+	document.write("<br>");
+
+   if (jbtn=="A"||jbtn=="MANAGER")
+   {
+      document.write("Jabatan : Manager ")
+      document.write("<br>")
+      document.write("Gaji Pokok : Rp. "+boss)
+   }
+   else if (jbtn=="B"||jbtn=="KABID")
+   {
+      document.write("Jabatan : Kabid ")
+      document.write("<br>")
+      document.write("Gaji Pokok : Rp. "+wakil)
+   }
+   else if (jbtn=="C"||jbtn=="STAFF")
+   {
+      document.write("Jabatan : Staff ")
+      document.write("<br>")
+      document.write("Gaji Pokok : Rp. "+anggota)
+   }
+	document.write("<br>");
+	document.write('Potongan Gaji : Rp.'+alfa)
+	document.write("<br>")
+
+	switch (kawin)
+	{
+		case "YA":
+		document.write("Status Pernikahan : KAWIN")
+		document.write("<br>")
+		document.write("Tunjangan Keluarga : "+tunjangank)
+		break;
+
+		case "TIDAK":
+		document.write("Status Pernikahan : TIDAK KAWIN")
+		document.write("<br>")
+		document.write("Tunjangan Keluarga : 0 ")
+		break;
+
+		default:
+		document.write("Status Pernikahan : -")
+		document.write("<br>")
+		document.write("Tunjangan Keluarga : 0 ")
+		break;  
+
+	}
+
+	document.write("<br>")
+	document.write("Potongan Pajak : 2 %")
+	document.write("<br>")
+	document.write("Total Gaji : "+total)
+	
+</script>
+</body>
+</html>
